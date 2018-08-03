@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="index.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+</head>
+<body style="background-color:whitesmoke;">
+    <div class="main">
+        <div class="row">
+            <div class="col-md-9 col-sm-9 col-lg-9 text-center"> 
+                <h1>Automated Teller Machine</h1>
+                <div id="login">
+                
+                <input type="text" class="txt form-control" placeholder="User Name" id="txtUser"/><br>
+                <input type="password" class="txt form-control" placeholder="Pass Code" id="txtPass" /><br>
+                <button class="btnLogin btn btn-default" onclick="login()">Login</button><br>
+                <span>Create By Hamza Khatri</span>
+            </div>
+                <!------------------------------------MENU ITEMS---------------------------------->
+                <div id="menu" style="display: none">
+                    <h2>M E N U</h2>
+                    <button class="menu-items btn-info" onclick="withdraw()">Withdraw</button>
+                    <button class="menu-items btn-info" onclick="transfer()">Transfer</button>
+                    <button class="menu-items btn-info" onclick="deposit()">Deposit</button>
+                    <button class="menu-items btn-info" onclick="inquiry()">Inquiry</button>
+                </div>
+                <div id="withdraw" style="display: none;">
+                    <h2>W I T H D R A W</h2>
+                    <input type="number" placeholder="Withdraw Amount" class="form-control" id=txtWithdraw />
+                    <button class="btn" onclick="giveMeCash()">WithDraw Cash</button>
+                    <button class="btn" onclick="cancel('withdraw')">Cancel</button><br /><br />
+                    <span id="withdrawInfo"></span>
+                </div>
+                <div id="transfer" style="display: none;">
+                    <h2>T R A N S F E R</h2>
+                    <input type="text" placeholder="Enter Account Name" id="txtTransferAccName" class="form-control"  />
+                    
+                    <input type="number" placeholder="Enter Transfer Amount" id="txtTransferAmount" class="form-control"/>
+                    <button class="btn" onclick="cashTransfer()">Transfer</button>
+                    <button class="btn" onclick="cancel('transfer')">Cancel</button>
+                </div>
+                <div id="deposit" style="display:none;">
+                    <h2>D E P O S I T</h2>
+                    
+                    <input type="text" placeholder="Enter Account Name" id="txtDepositAccName" class="form-control" readonly/>
+                    <input type="text" placeholder="Enter Deposiit Number" id="txtDepositAmount" class="form-control"/>                    
+                    <button class="btn" onclick="cashDepsoit()">Depsoit</button>
+                    <button class="btn" onclick="cancel('deposit')">Cancel</button>
+                </div>
+                <div id="inquiry" style="display: none;">
+                    <h2>B A L A N C E  I N Q U I R Y</h2>
+                    <label>Account Name</label><input type="text" id="txtInquiryAccName" class="form-control" readonly />
+                    <label>Account Number</label><input type="text" id="txtInquiryAccNumber" class="form-control" readonly />
+                    <label>Current Balance</label><input type="text" id="txtInquiryAccBalance" class="form-control" readonly />
+                    <button class="btn" onclick="inquiry()">Inquiry</button>
+                    <button class="btn" onclick="cancel('inquiry')">Close</button>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-lg-3 text-center">
+                <button class="btn btn-success" onclick="logout()">Logout</button><br>
+                <img src="atm.png" alt="ATM" class="center-block" style="margin:30px auto; width: auto; height: 200px; " />
+                
+            </div>
+        </div>
+        
+    </div>
+    <table style="margin:20px auto; border: 1px solid;">
+        <tr>
+            <td><b>USER NAME</b></td>
+            <td><b>PASS WORD</b></td>
+        </tr>
+        <tr>
+            <td>hamza</td>
+            <td>1228</td>
+        </tr>
+        <tr>
+            <td>kuldeep</td>
+            <td>1229</td>
+        </tr>
+        <tr>
+            <td>majid</td>
+            <td>1230</td>
+        </tr>
+        <tr>
+            <td>subhan</td>
+            <td>1231</td>
+        </tr>
+        <tr>
+            <td>haseeb</td>
+            <td>1232</td>
+        </tr>
+        <tr>
+            <td>furqan</td>
+            <td>1233</td>
+        </tr>
+        <tr>
+            <td>yousuf</td>
+            <td>1234</td>
+        </tr>
+    </table>
+</body>
+</html>
+
+<!-- var user=["hamza","kuldeep","majid","subhan","haseeb","furqan","yousuf"];
+var pass=["1228","1229","1230","1231","1232","1233","1234"]; -->

@@ -1,0 +1,36 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.main{
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    background-color: aquamarine;
+}
+.btn{
+    margin: 5px;
+}
+.txt{
+    width: 50%;
+}
+.menu-items{
+    text-align: center;
+    padding: 5px;
+    background-color: darkgoldenrod;
+    margin:5px auto;
+    font-size: 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px 1px 1px 8px solid #f4a400;
+    display: block !important;
+    width: 80%;
+}
+.menu-items:hover{
+    background-color: transparent;
+    border: 1px 1px 1px 8px chocolate;
+    
+}
+td{
+    padding: 5px;
+    text-align: center;
+}
