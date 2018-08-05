@@ -97,7 +97,7 @@ function cashTransfer(){
     
                      var chk=false;
                      var accountName = document.getElementById('txtTransferAccName').value.toLowerCase();
-                     var transferAmount = Number(document.getElementById('txtTransferAmount').value);
+                     var transferAmount = parseInt(document.getElementById('txtTransferAmount').value);
                      for(var j=0; j<user.length; j++){
                          if(accountName===user[j].toLowerCase()){
                              chk=true;
@@ -122,11 +122,11 @@ function cashDepsoit(){
                     var chk=false; 
                     
                      var accountName = document.getElementById('txtDepositAccName').value.toLowerCase();
-                     var depositAmount = Number(document.getElementById('txtDepositAmount').value);
+                     var depositAmount = parseInt(document.getElementById('txtDepositAmount').value);
                      for(var j=0; j<user.length; j++){
                          if(accountName===user[j].toLowerCase() ){
                              chk=true;
-                             amount[j]=parseInt(amount[j]+depositAmount);
+                             amount[j]=parseInt(amount[j])+depositAmount;
                              
                              alert("\nSuccessfully Deposit amount of  Rs."+depositAmount+" to "+accountName+" \nDate: "+now.toDateString()+" Time: "+time);
                              document.getElementById('txtDepositAmount').value="";
